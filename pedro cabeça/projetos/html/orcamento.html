@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orçamento - Barata Som</title>
+
+<link rel="stylesheet" href="../css_style/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>ORÇAMENTO</h1>
+</header>
+
+<section>
+    <button class="btn" onclick="voltarPagina()">← Voltar</button>
+</section>
+
+<!-- PACOTES -->
+<section class="box">
+<h2>Pacotes</h2>
+
+<select id="pacote">
+    <option value="nenhum">Não escolher pacote</option>
+    <option value="550">Evento pequeno</option>
+    <option value="700">Evento médio</option>
+    <option value="0">Evento grande (WhatsApp)</option>
+</select>
+
+</section>
+
+<!-- CAIXAS -->
+<section class="box">
+<h2>Caixas de Som</h2>
+
+<p>GOLD</p>
+<div class="controle">
+    <button class="btn-control" onclick="remove('gold')">−</button>
+    <span id="gold" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('gold')">+</button>
+</div>
+
+<p>BLG</p>
+<div class="controle">
+    <button class="btn-control" onclick="remove('blg')">−</button>
+    <span id="blg" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('blg')">+</button>
+</div>
+
+<p>ELETROVOICE</p>
+<div class="controle">
+    <button class="btn-control" onclick="remove('eletro')">−</button>
+    <span id="eletro" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('eletro')">+</button>
+</div>
+
+<p>QSC</p>
+<div class="controle">
+    <button class="btn-control" onclick="remove('qsc')">−</button>
+    <span id="qsc" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('qsc')">+</button>
+</div>
+
+<p>RSF</p>
+<div class="controle">
+    <button class="btn-control" onclick="remove('rsf')">−</button>
+    <span id="rsf" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('rsf')">+</button>
+</div>
+
+<p>CAIXA X</p>
+<div class="controle">
+    <button class="btn-control" onclick="remove('caixax')">−</button>
+    <span id="caixax" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('caixax')">+</button>
+</div>
+
+<p>LINE</p>
+<button class="btn" onclick="selecionarLine()">Consultar via WhatsApp</button>
+
+</section>
+
+<!-- SUB -->
+<section class="box">
+<h2>Sub Grave</h2>
+
+<div class="controle">
+    <button class="btn-control" onclick="remove('sub')">−</button>
+    <span id="sub" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('sub')">+</button>
+</div>
+
+</section>
+
+<!-- PEDESTAIS -->
+<section class="box">
+<h2>Pedestais</h2>
+
+<div class="controle">
+    <button class="btn-control" onclick="remove('pedestal')">−</button>
+    <span id="pedestal" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('pedestal')">+</button>
+</div>
+
+</section>
+
+<!-- MESA -->
+<section class="box">
+<h2>Mesa de Som</h2>
+
+<select id="mesa">
+    <option value="50">Analógica</option>
+    <option value="100">Digital</option>
+</select>
+
+</section>
+
+<!-- RETORNO -->
+<section class="box">
+<h2>Retorno (Fone)</h2>
+
+<div class="controle">
+    <button class="btn-control" onclick="remove('retorno')">−</button>
+    <span id="retorno" class="quantidade">0</span>
+    <button class="btn-control" onclick="add('retorno')">+</button>
+</div>
+
+</section>
+
+<!-- COMENTÁRIO -->
+<section class="box">
+<h2>Descreva seu evento</h2>
+<textarea id="comentario" required></textarea>
+</section>
+
+<!-- AVISO -->
+<section class="box">
+<p>Som personalizado, palco e iluminação apenas via WhatsApp</p>
+</section>
+
+<!-- Carrinho -->
+<section class="box">
+<h2>Resumo do Pedido</h2>
+
+<pre id="resumo" style="text-align:left; white-space:pre-wrap;"></pre>
+
+</section>
+</section>
+
+<!-- TOTAL -->
+<section class="box">
+<h2>Total</h2>
+<p id="total">R$ 0</p>
+
+<button class="btn" onclick="calcular()">Calcular</button>
+</section>
+
+<!-- WHATS -->
+<section class="box">
+<button class="btn" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
+</section>
+
+<script src="../java_script/script.js"></script>
+
+</body>
+</html>
